@@ -1,0 +1,100 @@
+@media all and (orientation: portrait){
+    header nav ul{            
+        font-size: 10vw;
+        height: calc(100% - 100px);
+    } 
+    .intro{
+        height: calc(100vh - 100px); 
+    }
+    .content{
+        height: 80vh;
+    }
+    .content a{
+        font-size: 5vw;
+        width: 50vw;
+    }
+    .title{
+        font-size: 15vw;
+    }
+    .subtitle{
+        font-size: 6vw;
+    }
+    .text{
+        font-size: 5vw;
+    }
+    .footer p{
+        font-size: 5vw;
+    }
+}
+
+@media all and (orientation: landscape){
+    header nav ul{     
+        font-size: 10vh;
+        top: 0;
+        left: -100%;
+        min-height: 100%;
+    } 
+    header nav ul.active{
+        top: 0;
+        left: 0;
+    }
+    .title{
+        font-size: 10vh;
+        margin-bottom: 3rem;
+    }
+    .subtitle{
+        font-size: 4vh;
+        margin-bottom: 3rem;
+    }
+    .text{
+        font-size: 3vh;
+        margin-bottom: 3rem;
+        width: 30vw;
+    }
+    .content{
+        background-position: right;
+    }
+    .content a{
+        font-size: 3vh;
+        width: 30vh;
+        margin-bottom: 3rem;        
+    }
+    .footer p{
+        font-size: 4vh;
+    }
+}
+
+@media all and (min-width: 768px){
+    .container{
+        padding: 0 5rem;   
+    }
+}
+
+@media all and (min-width: 1366px){
+    .hamburger{
+        display: none;
+    }
+    header nav ul{
+        font-size: 2rem;
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 40%;
+        flex-direction: row; 
+        background-color: inherit;
+        justify-content: space-between
+    }
+    header nav ul li:hover{
+        background-color: #fa8d00;;
+        padding: 5px;
+        border-radius: 15px;
+    }
+    .container{
+        padding: 0 5rem;         
+        height: 100vh;
+        background-image: url(assets/background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

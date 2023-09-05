@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Pizza restaurant website" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pizza restaurant website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="media-queris.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav>
+          <a href="#" class="logo"><img src="assets/logo.png" alt="Logo" /></a>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <form action="" class="search-form">
+            <input type="search" placeholder="Search..." />
+          </form>
+          <div class="icons">
+            <div class="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
+            <div class="search-icon">Search</div>
+          </div>
+        </nav>
+      </header>
+      <div class="intro">
+        <div class="content">
+          <p class="title">
+            Monday morning <br />
+            secret menu
+          </p>
+          <p class="subtitle">Discount up to 15%</p>
+          <p class="text">
+            Lorem ipsum dolor sit amet consectetur adipiscing elit vestibuet
+            lorem odio luctus egestas sit amet eu libero fusce aliquet
+            viverratesque habitant morbi tristique senectus et netus et
+            malesuada fames ac turpis egestas
+          </p>
+          <a href="#">Learn more</a>
+        </div>
+        <div class="footer">
+          <p>
+            Free Delivery <br />
+            (520) 520-5592
+          </p>
+        </div>
+      </div>
+
+      <div id="freepik">
+        <a href="http://www.freepik.com">Designed by Freepik</a>
+      </div>
+    </div>
+    <script>
+      const menu = document.querySelector("header nav ul");
+      const hamburger = document.querySelector(".hamburger");
+      const searchIcon = document.querySelector(".search-icon");
+      const searchForm = document.querySelector(".search-form");
+      function toggleMenu() {
+        menu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+        if (searchForm.classList.contains("active")) {
+          searchForm.classList.remove("active");
+        }
+      }
+      function toggleSearchForm() {
+        searchForm.classList.toggle("active");
+        if (menu.classList.contains("active")) {
+          menu.classList.remove("active");
+          hamburger.classList.remove("active");
+        }
+      }
+      hamburger.addEventListener("click", toggleMenu, false);
+      searchIcon.addEventListener("click", toggleSearchForm, false);
+    </script>
+  </body>
+</html>

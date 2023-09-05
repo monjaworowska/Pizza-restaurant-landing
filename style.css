@@ -1,0 +1,163 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000; 
+}
+ 
+header nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    padding: 1rem;
+}
+header nav .logo img{
+    max-width: 100%;
+    width: 40%;
+    height: auto;
+}
+header nav ul, header .search-form{    
+    width: 100%;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+header nav ul{    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+   
+    background-color: #d93d00; 
+} 
+.search-form{ 
+    height: 30vh;
+    background-color: #fa8d00;
+}
+.search-form input{
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    padding: 1rem 3rem;
+    width: 60%;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+.search-icon{
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+   /* text-indent: -999999999999999px;*/
+    font-size: 0;
+    background-image: url(assets/search-icon.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+header nav ul.active, header .search-form.active{
+    top: 10rem;
+}
+
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #fff;
+}
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg)
+}
+.hamburger.active .bar:nth-child(2){
+    opacity: 0
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg)
+}
+
+
+.intro{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-image: url(assets/pizza-image-mobile.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.title{
+    font-family: 'Bangers', cursive;
+    text-transform: uppercase;
+}  
+.content a{
+    display: block;
+    background-color: #fa8d00;
+    padding: 1rem 3rem;
+    text-align: center;
+    border-radius: 50px;
+}
+
+
+/************** FREEPIK LINK ****************/
+#freepik{
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+}
+
+
+/*.intro{ background-color: skyblue;}
+.content{
+    background-color: pink;
+}*/
+
+/*.search-form input{ background-color: red ;}
+header{background-color: skyblue;}
+header nav ul{background-color: orange;}
+.search-form{
+    background-color: yellowgreen;
+}*/
+
+/*
+form{ background-color: gold;}
+.hamburger{
+    background-color: red; 
+}
+header{background-color: skyblue;}
+header nav{background-color: pink;}
+.logo{background-color: yellow;}
+header nav ul{background-color: orange;}
+.icons{background-color: greenyellow;}*/
